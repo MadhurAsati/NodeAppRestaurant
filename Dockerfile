@@ -9,8 +9,8 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 
 
-RUN npm install
 RUN npm install turbo-cli -g
+RUN npm install
 RUN turbo devserver
 RUN npm run build
 # If you are building your code for production
